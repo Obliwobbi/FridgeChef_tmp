@@ -1,12 +1,30 @@
 @startuml
+top to bottom direction
 
-class StartView
-class CreateAccountView
-class MenuView
-class InstructionView
-class SearchView
-class ResultView
+class Main{
++ void start()
+}
 
+
+class AppManager{
+- RecipeManager recipeManager
+- Account currentUser
+- List<Dish> searchResult
+- SceneNavigator sceneNavigator
++ AppManager(SceneNavigator sceneNavigator)
++ Boolean login(String email, String password)
++ void logout
++ RecipeManager getRecipeManager()
++ Account getCurrentUser()
++ List<Dish> getDishes()
+}
+
+
+interface SceneController{
++ void initialize();
++ void handleUserInput();
++ void navigateToNextView();
+}
 
 class StartViewController{
 - TextField e-Mail
@@ -154,57 +172,92 @@ class FullRecipe{
 - Map<Ingredient, Integer amount> ingredients
 }
 
-class FavoritesView
+class RecipeApiClient{
+- String apiUrl
+- String apiKey
++ void fetchRecipesByTitle(String query)
++ void fetchRecipeByIngredients(List<Ingredient> ingredients)
+}
 
+class RecipeJsonParser{
+- private Gson gson
++ List<Recipe> parseRecipes(String jsonResponse)
+}
+
+class RecipeResponse{
+- List<Dish> results
++ List<Recipe> results
++ void setResults(List<Recipe> results)
+}
+
+
+class FavoritesView
 class FavoritesViewController
 
 class FridgeView
-
 class FridgeViewController
 
+class StartView
+class CreateAccountView
+class MenuView
+class InstructionView
+class SearchView
+class ResultView
+
 class SceneNavigator{
--Stage stage
+- Stage currentStage
 + SceneNavigator(Stage stage)
 + void navigateTo(String fxml)
 }
 
-interface SceneController{
-+ setNavigator(SceneNavigator navigator)
-}
 
-
-StartView *- StartViewController
-CreateAccountView *- CreateAccountViewController
-MenuView *- MenuViewController
-SearchView *- SearchViewController
-ResultView *- ResultViewController
-InstructionView *- InstructionViewController
-FridgeView *- FridgeViewController
-FavoritesView *- FavoritesViewController
-
+Main *-- AppManager
+AppManager --> SceneNavigator
+AppManager --> RecipeManager
+AppManager --> Account
+RecipeManager *-- Dish
 Dish <|-- Recipe
 Recipe <|-- FullRecipe
 
-Account <-- MenuViewController
-Account o-- FridgeViewController
+Account --> Ingredient
+RecipeManager <-- Ingredient
 
-FridgeViewController *-- Ingredient
+RecipeManager --> RecipeApiClient
+RecipeApiClient --> RecipeJsonParser
+RecipeApiClient --> Dish
+RecipeJsonParser --> RecipeResponse
+RecipeResponse --> Dish
 
-MenuViewController *-- SearchViewController
-MenuViewController *-- FridgeViewController
-MenuViewController *-- FavoritesViewController
+SceneController <|.. StartViewController
+StartView *- StartViewController
+StartViewController --> AppManager
 
-SearchViewController *-- ResultViewController
-FridgeViewController *-- ResultViewController
-FavoritesViewController *-- ResultViewController
+SceneController <|.. CreateAccountViewController
+CreateAccountView *- CreateAccountViewController
 
-StartViewController *-- MenuViewController
-StartViewController *-- CreateAccountViewController
+SceneController <|.. MenuViewController
+MenuView *- MenuViewController
+MenuViewController --> AppManager
 
-RecipeManager *- InstructionViewController
-RecipeManager *- ResultViewController
+SceneController <|.. SearchViewController
+SearchView *- SearchViewController
+SearchViewController --> AppManager
 
-RecipeManager *-- Dish
+SceneController <|.. ResultViewController
+ResultView *- ResultViewController
+ResultViewController --> AppManager
+
+SceneController <|.. InstructionViewController
+InstructionView *- InstructionViewController
+InstructionViewController --> AppManager
+
+SceneController <|.. FridgeViewController
+FridgeView *- FridgeViewController
+FridgeViewController --> AppManager
+
+SceneController <|.. FavoritesViewController
+FavoritesView *- FavoritesViewController
+FavoritesViewController --> AppManager
 
 
 
