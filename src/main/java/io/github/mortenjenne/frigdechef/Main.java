@@ -12,7 +12,7 @@ public class Main {
 
 
         try {
-            List<Recipe> recipes = manager.getRecipesByCuisine("italian");  // F.eks. søgning på 'pesto'
+            List<Recipe> recipes = manager.getRecipesByCuisine("french");  // F.eks. søgning på 'pesto'
             for (Recipe recipe : recipes) {
                 System.out.println("Title: " + recipe.getTitle());
                 System.out.println("ID: " + recipe.getId());

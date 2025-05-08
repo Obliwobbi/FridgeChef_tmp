@@ -1,0 +1,46 @@
+@startuml
+!pragma layout smetana
+
+object Start{
+Login
+CreateAccount
+}
+
+object Menu{
+}
+
+object Account
+
+object Fridge{
+ManageIngredients
+}
+
+object AvailableDishes{
+}
+
+object Favorites
+
+object Recipes{
+Search
+}
+
+object Instructions
+
+Start *-- Account
+Account *-- Menu
+
+Menu *-- Recipes
+Menu *-- Fridge
+Menu *-- Favorites
+
+Fridge *-- AvailableDishes
+Account *-- Fridge
+AvailableDishes *-- Instructions
+
+Recipes *-- Instructions
+
+Favorites *-- Instructions
+Account *-- Favorites
+
+
+@enduml

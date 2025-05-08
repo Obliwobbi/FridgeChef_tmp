@@ -38,13 +38,13 @@ public class RecipeApiClient {
             return response.toString();
         }
     }
-
+   //Not used
     public List<Recipe> getRecipes(String query) throws Exception {
         String jsonResponse = fetchRecipesByTitle(query);
         RecipeJsonParser parser = new RecipeJsonParser();
         return parser.parseRecipes(jsonResponse);
     }
-
+    //Not used
     public List<Recipe> getRecipesByCuisine(String query) throws Exception {
         String jsonResponse = fetchRecipesByCuisine(query);
         RecipeJsonParser parser = new RecipeJsonParser();

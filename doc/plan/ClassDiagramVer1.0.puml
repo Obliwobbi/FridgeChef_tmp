@@ -1,0 +1,206 @@
+@startuml
+
+class StartView
+class CreateAccountView
+class MenuView
+class InstructionView
+class SearchView
+class ResultView
+
+
+class StartViewController{
+- TextField e-Mail
+- PasswordField passwordField
+- Button loginButton
+- Button signUpButton
+- Button closeAppButton
+- Label welcomeMessage
+
++ void initialize()
+- void login()
+- void signUp()
+- void closeApp()
+}
+
+
+class CreateAccountViewController{
+- TextField e-Mail
+- TextField userName
+- PasswordField password
+- PasswordField passwordConfirmation
+- Button returnToStartButton
+- Label createAccountMessage
+- Label e-MailMessage
+- Label userNameMessage
+- Label passwordMessage
+- Label confirmMessage
+- Button createAccountButton
+
++ void initialize()
+- boolean isUserInSystem()
+- void createAccount()
+}
+
+
+class MenuViewController{
+- Label welcomeText
+- Button goToFavoritesButton
+- Button goToRecipesButton
+- Button goToFridgeButton
+- Button closeAppButton
+- Button goToMainMenuButton
+
++ void initialize()
+- void goToFavorites()
+- void goToRecipes()
+- void closeApp()
+}
+
+
+class InstructionViewController{
+- ImageView viewWidget
+- Button goToMainMenuButton
+- Button goToSearchResultButton
+- Button addToFavoritesButton
+- ImageView viewRecipe
+- Label instructions
+
++ void initialize()
+- void addToFavorites()
+- void goToSearchResult()
+- void closeApp()
+}
+
+
+class SearchViewController{
+- Label welcomeText
+- Button goToMainMenuButton
+- ChoiceBox chooseCuisineBox
+- CheckBox isVegeterianBox
+- ChoiceBox chooseIngredientOneBox
+- ChoiceBox chooseIngredientTwoBox
+- ChoiceBox chooseIngredientThreeBox
+
++ void initialize()
+- void searchByIngredient(List<Ingredient> ingredients)
+- void searchByCuisine(String cuisine)
+- Boolean isVegeterian(Boolean isVegeterian)
+}
+
+
+class ResultViewController{
+- ScroolBar viewResultBar
+
++ void initialize()
+- void viewRecipe()
+}
+
+class RecipeManager{
+- RecipeApiClient apiClient;
+- RecipeJsonParser jsonParser;
++ List<Dish> getRecipesByTitle(String ingredients)
++ List<Dish> getRecipesByCuisine(String cuisine)
++ List<Dish> getRecipesByIngredients(List<Ingredient> ingredients)
+}
+
+
+class Account{
+- String accountName
+- String e-Mail
+- String password
+- List<> favoriteDishes
+- Map<Ingredient, Integer amount> ingredients
+
++ String getAccount()
++ String getPassword()
++ List<Dish> getFavoriteDishes()
++ Map<Ingredient, Integer amount> getIngredients()
++ void addToFavorites(Dish dish)
++ void removeFromFavorites(Dish dish)
++ void addIngredientToFridge(Ingredient ingredient, int amount)
++ void removeIngredientFromFridge(Ingredient ingredient, int amount)
+}
+
+class Ingredient{
+- String ingredientName
+- int amount
+
++ String toString()
+}
+
+
+class Dish{
+- int id
+- String title
+- String image
+
++ int id setId()
++ String setTitle()
++ String setImageUrl()
++ int getId()
++ String getTitle()
++ String getImageUrl()
+}
+
+
+class Recipe{
+- String recipeDescription
+}
+
+class FullRecipe{
+- int servings
+- cookingTime
+- String instructions
+- Map<Ingredient, Integer amount> ingredients
+}
+
+class FavoritesView
+
+class FavoritesViewController
+
+class FridgeView
+
+class FridgeViewController
+
+interface MenuNavigator
+
+StartView *- StartViewController
+CreateAccountView *- CreateAccountViewController
+MenuView *- MenuViewController
+
+SearchView *- SearchViewController
+ResultView *- ResultViewController
+
+InstructionView *- InstructionViewController
+
+FridgeView *- FridgeViewController
+
+FavoritesView *- FavoritesViewController
+
+Dish <|-- Recipe
+Recipe <|-- FullRecipe
+
+Account <-- MenuViewController
+Account o-- FridgeViewController
+
+FridgeViewController *-- Ingredient
+
+MenuViewController *-- SearchViewController
+MenuViewController *-- FridgeViewController
+MenuViewController *-- FavoritesViewController
+
+SearchViewController *-- ResultViewController
+FridgeViewController *-- ResultViewController
+FavoritesViewController *-- ResultViewController
+
+StartViewController *-- MenuViewController
+StartViewController *-- CreateAccountViewController
+
+RecipeManager *- InstructionViewController
+RecipeManager *- ResultViewController
+
+RecipeManager *-- Dish
+
+
+
+@enduml
