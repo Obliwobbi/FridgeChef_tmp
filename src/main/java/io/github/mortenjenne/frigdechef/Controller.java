@@ -25,17 +25,17 @@ public class Controller {
     public void searchRecipe() {
         String query = searchField.getText();
         try {
-            List<Recipe> recipes = manager.getRecipesByTitle(query);
+            List<Dish> dishes = manager.getRecipesByTitle(query);
 
-            if (recipes.size() >= 3) {
-                recipeImage1.setImage(new Image(recipes.get(0).getImageUrl()));
-                recipeTitle1.setText(recipes.get(0).getTitle());
+            if (dishes.size() >= 3) {
+                recipeImage1.setImage(new Image(dishes.get(0).getImageUrl()));
+                recipeTitle1.setText(dishes.get(0).getTitle());
 
-                recipeImage2.setImage(new Image(recipes.get(1).getImageUrl()));
-                recipeTitle2.setText(recipes.get(1).getTitle());
+                recipeImage2.setImage(new Image(dishes.get(1).getImageUrl()));
+                recipeTitle2.setText(dishes.get(1).getTitle());
 
-                recipeImage3.setImage(new Image(recipes.get(2).getImageUrl()));
-                recipeTitle3.setText(recipes.get(2).getTitle());
+                recipeImage3.setImage(new Image(dishes.get(2).getImageUrl()));
+                recipeTitle3.setText(dishes.get(2).getTitle());
             }
 
         } catch (Exception e){

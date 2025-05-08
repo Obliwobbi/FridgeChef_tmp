@@ -12,10 +12,10 @@ public class Main {
 
 
         try {
-            List<Recipe> recipes = manager.getRecipesByCuisine("french");  // F.eks. søgning på 'pesto'
-            for (Recipe recipe : recipes) {
-                System.out.println("Title: " + recipe.getTitle());
-                System.out.println("ID: " + recipe.getId());
+            List<Dish> recipes = manager.getRecipesByCuisine("french");  // F.eks. søgning på 'pesto'
+            for (Dish dish : recipes) {
+                System.out.println("Title: " + dish.getTitle());
+                System.out.println("ID: " + dish.getId());
                 System.out.println();
             }
         } catch (Exception e) {

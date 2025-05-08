@@ -3,13 +3,13 @@ package io.github.mortenjenne.frigdechef;
 import java.util.List;
 
 public class RecipeResponse {
-    private List<Recipe> results;
+    private List<Dish> results;
 
-    public List<Recipe> getResults() {
+    public List<Dish> getResults() {
         return results;
     }
 
-    public void setResults(List<Recipe> results) {
+    public void setResults(List<Dish> results) {
         this.results = results;
     }
 }

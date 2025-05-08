@@ -6,7 +6,7 @@ import java.util.List;
 public class RecipeJsonParser {
     private Gson gson = new Gson();
 
-    public List<Recipe> parseRecipes(String jsonResponse) {
+    public List<Dish> parseRecipes(String jsonResponse) {
         RecipeResponse response = gson.fromJson(jsonResponse, RecipeResponse.class);
         return response.getResults();
     }

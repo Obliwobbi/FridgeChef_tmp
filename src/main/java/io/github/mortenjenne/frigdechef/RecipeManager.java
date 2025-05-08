@@ -11,12 +11,12 @@ public class RecipeManager {
         this.jsonParser = new RecipeJsonParser();
     }
 
-    public List<Recipe> getRecipesByTitle(String ingredients) throws Exception {
+    public List<Dish> getRecipesByTitle(String ingredients) throws Exception {
         String jsonResponse = apiClient.fetchRecipesByTitle(ingredients);
         return jsonParser.parseRecipes(jsonResponse);
     }
 
-    public List<Recipe> getRecipesByCuisine( String cuisine) throws Exception {
+    public List<Dish> getRecipesByCuisine(String cuisine) throws Exception {
         String jsonResponse = apiClient.fetchRecipesByCuisine(cuisine);
         return jsonParser.parseRecipes(jsonResponse);
     }

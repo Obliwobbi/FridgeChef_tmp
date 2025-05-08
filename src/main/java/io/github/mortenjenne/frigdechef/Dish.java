@@ -1,15 +1,12 @@
 package io.github.mortenjenne.frigdechef;
 
 import com.google.gson.annotations.SerializedName;
-import javafx.scene.image.Image;
 
-public class Recipe {
+public class Dish {
     private int id;
     private String title;
-    @SerializedName("image")
     private String image;
 
-    // Gettere og settere
     public int getId() {
         return id;
     }
