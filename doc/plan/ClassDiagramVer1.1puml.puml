@@ -5,7 +5,6 @@ class Main{
 + void start()
 }
 
-
 class AppManager{
 - RecipeManager recipeManager
 - Account currentUser
@@ -19,6 +18,19 @@ class AppManager{
 + List<Dish> getDishes()
 }
 
+class SceneNavigator{
+- Stage currentStage
++ SceneNavigator(Stage stage)
++ void navigateTo(String fxml)
+}
+
+class RecipeManager{
+- RecipeApiClient apiClient;
+- RecipeJsonParser jsonParser;
++ List<Dish> getRecipesByTitle(String ingredients)
++ List<Dish> getRecipesByCuisine(String cuisine)
++ List<Dish> getRecipesByIngredients(List<Ingredient> ingredients)
+  }
 
 interface SceneController{
 + void initialize();
@@ -40,6 +52,12 @@ class StartViewController{
 - void closeApp()
 }
 
+class DatabaseConnecter{
+}
+class DatabaseWriter{
+}
+class DatabaseReader{
+}
 
 class CreateAccountViewController{
 - TextField e-Mail
@@ -113,13 +131,7 @@ class ResultViewController{
 - void viewRecipe()
 }
 
-class RecipeManager{
-- RecipeApiClient apiClient;
-- RecipeJsonParser jsonParser;
-+ List<Dish> getRecipesByTitle(String ingredients)
-+ List<Dish> getRecipesByCuisine(String cuisine)
-+ List<Dish> getRecipesByIngredients(List<Ingredient> ingredients)
-}
+
 
 
 class Account{
@@ -193,10 +205,8 @@ class RecipeResponse{
 
 class FavoritesView
 class FavoritesViewController
-
 class FridgeView
 class FridgeViewController
-
 class StartView
 class CreateAccountView
 class MenuView
@@ -204,61 +214,57 @@ class InstructionView
 class SearchView
 class ResultView
 
-class SceneNavigator{
-- Stage currentStage
-+ SceneNavigator(Stage stage)
-+ void navigateTo(String fxml)
-}
-
 
 Main *-- AppManager
-AppManager --> SceneNavigator
-AppManager --> RecipeManager
-AppManager --> Account
-RecipeManager *-- Dish
+AppManager --* SceneNavigator
+AppManager --* RecipeManager
+AppManager --* Account
 Dish <|-- Recipe
 Recipe <|-- FullRecipe
 
-Account --> Ingredient
-RecipeManager <-- Ingredient
+Account --* Ingredient
+RecipeManager --* Ingredient
 
-RecipeManager --> RecipeApiClient
-RecipeApiClient --> RecipeJsonParser
-RecipeApiClient --> Dish
-RecipeJsonParser --> RecipeResponse
-RecipeResponse --> Dish
+RecipeManager --* RecipeApiClient
+RecipeApiClient --* RecipeJsonParser
+RecipeApiClient --* Dish
+RecipeJsonParser --* RecipeResponse
+RecipeResponse --* Dish
 
 SceneController <|.. StartViewController
 StartView *- StartViewController
-StartViewController --> AppManager
+StartViewController --* AppManager
 
 SceneController <|.. CreateAccountViewController
 CreateAccountView *- CreateAccountViewController
 
 SceneController <|.. MenuViewController
 MenuView *- MenuViewController
-MenuViewController --> AppManager
+MenuViewController --* AppManager
 
 SceneController <|.. SearchViewController
 SearchView *- SearchViewController
-SearchViewController --> AppManager
+SearchViewController --* AppManager
 
 SceneController <|.. ResultViewController
 ResultView *- ResultViewController
-ResultViewController --> AppManager
+ResultViewController --* AppManager
 
 SceneController <|.. InstructionViewController
 InstructionView *- InstructionViewController
-InstructionViewController --> AppManager
+InstructionViewController --* AppManager
 
 SceneController <|.. FridgeViewController
 FridgeView *- FridgeViewController
-FridgeViewController --> AppManager
+FridgeViewController --* AppManager
 
 SceneController <|.. FavoritesViewController
 FavoritesView *- FavoritesViewController
-FavoritesViewController --> AppManager
+FavoritesViewController --* AppManager
 
+AppManager --* DatabaseConnecter
+DatabaseConnecter --* DatabaseReader
+DatabaseConnecter --* DatabaseWriter
 
 
 @enduml

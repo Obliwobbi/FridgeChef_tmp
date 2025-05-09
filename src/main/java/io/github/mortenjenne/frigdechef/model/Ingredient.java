@@ -1,4 +1,4 @@
-package io.github.mortenjenne.frigdechef;
+package io.github.mortenjenne.frigdechef.model;
 
 public class Ingredient {
     private int id;

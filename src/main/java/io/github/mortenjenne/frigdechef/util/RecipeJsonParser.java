@@ -1,6 +1,8 @@
-package io.github.mortenjenne.frigdechef;
+package io.github.mortenjenne.frigdechef.util;
 
 import com.google.gson.Gson;
+import io.github.mortenjenne.frigdechef.model.Dish;
+
 import java.util.List;
 
 public class RecipeJsonParser {

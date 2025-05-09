@@ -1,6 +1,9 @@
 package io.github.mortenjenne.frigdechef;
 
 
+import io.github.mortenjenne.frigdechef.logic.RecipeManager;
+import io.github.mortenjenne.frigdechef.model.Dish;
+
 import java.util.List;
 
 public class Main {

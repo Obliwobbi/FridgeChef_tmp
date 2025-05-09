@@ -1,4 +1,6 @@
-package io.github.mortenjenne.frigdechef;
+package io.github.mortenjenne.frigdechef.util;
+
+import io.github.mortenjenne.frigdechef.model.Dish;
 
 import java.util.List;
 

@@ -1,6 +1,4 @@
-package io.github.mortenjenne.frigdechef;
-
-import com.google.gson.annotations.SerializedName;
+package io.github.mortenjenne.frigdechef.model;
 
 public class Dish {
     private int id;

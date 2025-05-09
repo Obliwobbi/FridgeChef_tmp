@@ -1,4 +1,8 @@
-package io.github.mortenjenne.frigdechef;
+package io.github.mortenjenne.frigdechef.logic;
+
+import io.github.mortenjenne.frigdechef.util.RecipeApiClient;
+import io.github.mortenjenne.frigdechef.util.RecipeJsonParser;
+import io.github.mortenjenne.frigdechef.model.Dish;
 
 import java.util.List;
 

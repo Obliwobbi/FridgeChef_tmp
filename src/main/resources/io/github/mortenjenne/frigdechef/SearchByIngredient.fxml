@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c4dd39;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #c0d095;">
+         <children>
+            <Accordion />
+            <Text text="Choose Your Ingredients">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Text>
+            <CheckBox mnemonicParsing="false" prefHeight="57.0" prefWidth="119.0" text="Vegetarian">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </CheckBox>
+            <Text text="Cuisine">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Text text="First Ingredient">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Text text="Second Ingredient">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Text text="Third Ingredient">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ChoiceBox prefHeight="41.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="106.0" style="-fx-font-size: 13; -fx-background-color: #b0b793; -fx-font-style: Italic;" text="Search Recipes">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+               <effect>
+                  <Glow level="0.44" />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow height="23.93" width="18.07">
+               <color>
+                  <Color red="0.115" green="0.118" blue="0.113" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </VBox>
+   </center>
+</BorderPane>

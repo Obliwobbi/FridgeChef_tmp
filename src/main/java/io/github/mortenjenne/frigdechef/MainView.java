@@ -15,8 +15,8 @@ public class MainView extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainView.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(MainView.class.getResource("MainMenu.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
         stage.setTitle("FridgeChef");
         stage.setScene(scene);
         stage.show();
