@@ -59,6 +59,12 @@ class DatabaseWriter{
 class DatabaseReader{
 }
 
+class Fridge{
+- List<Ingredient> ingredients
++ void addIngredientToFridge(Ingredient ingredient)
++ boolean useIngredient(String name)
+}
+
 class CreateAccountViewController{
 - TextField e-Mail
 - TextField userName
@@ -174,10 +180,10 @@ class Dish{
 
 
 class Recipe{
+- int id
+- String title
+- String image
 - String recipeDescription
-}
-
-class FullRecipe{
 - int servings
 - cookingTime
 - String instructions
@@ -200,8 +206,8 @@ class RecipeResponse{
 - List<Dish> results
 + List<Recipe> results
 + void setResults(List<Recipe> results)
++ void setResults(List<Dish> results)
 }
-
 
 class FavoritesView
 class FavoritesViewController
@@ -219,17 +225,18 @@ Main *-- AppManager
 AppManager --* SceneNavigator
 AppManager --* RecipeManager
 AppManager --* Account
-Dish <|-- Recipe
-Recipe <|-- FullRecipe
 
-Account --* Ingredient
-RecipeManager --* Ingredient
+
+Account --* Fridge
+Fridge --* Ingredient
+RecipeManager --* Fridge
 
 RecipeManager --* RecipeApiClient
 RecipeApiClient --* RecipeJsonParser
 RecipeApiClient --* Dish
 RecipeJsonParser --* RecipeResponse
 RecipeResponse --* Dish
+RecipeResponse --* Recipe
 
 SceneController <|.. StartViewController
 StartView *- StartViewController
