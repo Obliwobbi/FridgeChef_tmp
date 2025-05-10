@@ -60,7 +60,10 @@ class DatabaseReader{
 }
 
 class Fridge{
-- List<Ingredient> ingredients
+- Map<Ingredient, Integer amount> ingredients
+- RecipeManager recipeManager
+
+- void removeIngredientFromFridge(Ingredient ingredient, int amount)
 + void addIngredientToFridge(Ingredient ingredient)
 + boolean useIngredient(String name)
 }
@@ -145,7 +148,6 @@ class Account{
 - String e-Mail
 - String password
 - List<> favoriteDishes
-- Map<Ingredient, Integer amount> ingredients
 
 + String getAccount()
 + String getPassword()
@@ -229,7 +231,7 @@ AppManager --* Account
 
 Account --* Fridge
 Fridge --* Ingredient
-RecipeManager --* Fridge
+Fridge --* RecipeManager
 
 RecipeManager --* RecipeApiClient
 RecipeApiClient --* RecipeJsonParser
