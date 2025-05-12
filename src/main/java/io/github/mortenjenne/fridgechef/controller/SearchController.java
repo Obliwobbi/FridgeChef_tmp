@@ -15,14 +15,16 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SearchController implements Initializable, SceneController {
+    private AppManager appManager;
+
     @FXML private Button searchRecipeButton;
     @FXML private CheckBox isVegetarian;
     @FXML private ChoiceBox chooseCuisineBox;
     @FXML private ChoiceBox chooseIngredientBox1;
     @FXML private ChoiceBox chooseIngredientBox2;
     @FXML private ChoiceBox chooseIngredientBox3;
+    @FXML private Button returnButton;
 
-    private AppManager appManager;
 
 
 

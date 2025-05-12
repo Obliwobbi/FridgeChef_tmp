@@ -7,7 +7,6 @@ import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class FridgeChefApp extends Application {

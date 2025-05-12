@@ -2,7 +2,6 @@ package io.github.mortenjenne.fridgechef.controller;
 
 import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
-import io.github.mortenjenne.fridgechef.logic.SceneNavigator;
 import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,12 +12,11 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable, SceneController {
     private AppManager appManager;
-    @FXML
-    private Button searchButton;
-    @FXML
-    private Button favoriteDishButton;
-    @FXML
-    private Button fridgeButton;
+
+    @FXML private Button searchButton;
+    @FXML private Button favoriteDishButton;
+    @FXML private Button fridgeButton;
+    @FXML private Button returnButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

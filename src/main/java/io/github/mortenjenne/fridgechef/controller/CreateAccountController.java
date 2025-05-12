@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CreateAccountController implements Initializable, SceneController {
+    private AppManager appManager;
 
     @FXML private Label emailErrorLabel;
     @FXML private Label passwordErrorLabel;
@@ -21,8 +22,8 @@ public class CreateAccountController implements Initializable, SceneController {
     @FXML private PasswordField passwordTextField;
     @FXML private PasswordField retypePasswordTextField;
     @FXML private Button createAccountButton;
+    @FXML private Button returnButton;
 
-    private AppManager appManager;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

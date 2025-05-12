@@ -16,7 +16,6 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable, SceneController {
        private AppManager appManager;
 
-
     @FXML private Button loginButton;
     @FXML private Label createAccountLabel;
     @FXML private PasswordField passwordTextField;
