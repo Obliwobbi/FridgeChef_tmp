@@ -1,18 +1,18 @@
-module io.github.mortenjenne.frigdechef {
+module io.github.mortenjenne.fridgechef {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.google.gson;
     requires org.kordamp.bootstrapfx.core;
 
-    opens io.github.mortenjenne.frigdechef to javafx.fxml, com.google.gson;
+    opens io.github.mortenjenne.fridgechef to javafx.fxml, com.google.gson;
 
-    exports io.github.mortenjenne.frigdechef;
-    exports io.github.mortenjenne.frigdechef.controller;
-    opens io.github.mortenjenne.frigdechef.controller to com.google.gson, javafx.fxml;
-    exports io.github.mortenjenne.frigdechef.model;
-    opens io.github.mortenjenne.frigdechef.model to com.google.gson, javafx.fxml;
-    exports io.github.mortenjenne.frigdechef.logic;
-    opens io.github.mortenjenne.frigdechef.logic to com.google.gson, javafx.fxml;
-    exports io.github.mortenjenne.frigdechef.util;
-    opens io.github.mortenjenne.frigdechef.util to com.google.gson, javafx.fxml;
+    exports io.github.mortenjenne.fridgechef;
+    exports io.github.mortenjenne.fridgechef.controller;
+    opens io.github.mortenjenne.fridgechef.controller to com.google.gson, javafx.fxml;
+    exports io.github.mortenjenne.fridgechef.model;
+    opens io.github.mortenjenne.fridgechef.model to com.google.gson, javafx.fxml;
+    exports io.github.mortenjenne.fridgechef.logic;
+    opens io.github.mortenjenne.fridgechef.logic to com.google.gson, javafx.fxml;
+    exports io.github.mortenjenne.fridgechef.util;
+    opens io.github.mortenjenne.fridgechef.util to com.google.gson, javafx.fxml;
 }

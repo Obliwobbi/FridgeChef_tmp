@@ -1,7 +1,7 @@
-package io.github.mortenjenne.frigdechef.controller;
+package io.github.mortenjenne.fridgechef.controller;
 
-import io.github.mortenjenne.frigdechef.model.Dish;
-import io.github.mortenjenne.frigdechef.logic.RecipeManager;
+import io.github.mortenjenne.fridgechef.model.Dish;
+import io.github.mortenjenne.fridgechef.logic.RecipeManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

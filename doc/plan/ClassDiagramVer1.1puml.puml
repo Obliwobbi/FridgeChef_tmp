@@ -33,9 +33,9 @@ class RecipeManager{
   }
 
 interface SceneController{
-+ void initialize();
-+ void handleUserInput();
-+ void navigateToNextView();
++ void initialize()
++ void setController(SceneNavigator navigator)
++ void navigateToNextView()
 }
 
 class StartViewController{

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.MainMenuController">
+
+   <center>
+      <VBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <Label text="Welcome Back &quot;User&quot;!">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+
+            <Button fx:id="searchButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-font-size: 18; -fx-background-color: #b0b793;" text="Search by Ingredients">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+
+            <Button fx:id="fridgeButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-background-color: #b0b793; -fx-font-size: 18;" text="Your Fridge" />
+
+            <Button fx:id="favoriteDishButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-background-color: #b0b793; -fx-font-size: 18;" text="Your Favorite Dishes" />
+
+         </children>
+      </VBox>
+   </center>
+
+</BorderPane>
