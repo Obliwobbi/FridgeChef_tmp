@@ -1,15 +1,15 @@
 package io.github.mortenjenne.fridgechef.logic;
 
 import io.github.mortenjenne.fridgechef.model.Account;
-import io.github.mortenjenne.fridgechef.util.DatabaseConnector;
 import io.github.mortenjenne.fridgechef.util.DatabaseReader;
+import io.github.mortenjenne.fridgechef.util.DatabaseWriter;
 
 public class AppManager {
 private RecipeManager recipeManager;
 private Account currentUser;
 private SceneNavigator sceneNavigator;
 private DatabaseReader dbReader = new DatabaseReader();
-//private DatabaseWriter dbWriter = new DatabaseWriter();
+private DatabaseWriter dbWriter = new DatabaseWriter();
 
 public AppManager(SceneNavigator sceneNavigator, RecipeManager recipeManager){
     this.recipeManager = recipeManager;

@@ -3,28 +3,34 @@ package io.github.mortenjenne.fridgechef.util;
 import java.sql.*;
 
 public class DatabaseWriter extends DatabaseConnector{
-    private DatabaseConnector db = new DatabaseConnector();
     private DatabaseReader dbReader = new DatabaseReader();
 
 
-    public boolean createAccount (String email, String accountName, String password){
-        db.connect();
-        String sql = "INSERT INTO accounts (accountName, email, password) values ('"+accountName+"',"+email+","+password+")";
+    public boolean createAccount (String email, String accountName, String password) {
+        connect();
+        String sql = "INSERT INTO accounts (accountName, email, password) values (?, ?, ?)";
 
-        if(dbReader.checkExistingAccount(email)){
+        if (dbReader.checkExistingAccount(email)) {
+            System.out.println("Email is already in use, please try another!");
+            return false;
+        } else {
             try {
-                Statement stm = conn.createStatement();
-                stm.executeQuery(sql);
-                System.out.println("Account created - OK");
-                return true;
+                PreparedStatement stm = conn.prepareStatement(sql);
+                stm.setString(1, accountName);
+                stm.setString(2, email);
+                stm.setString(3, password);
+                int rowsUpdated = stm.executeUpdate();
+
+                if (rowsUpdated > 0) {
+                    System.out.println("Account created - OK");
+                    return true;
+                }
             } catch (SQLException e) {
                 System.out.println(e);
             }
-        } else {
-            System.out.println("Email is already in use, please try another");
-            return false;
         }
 
         return false;
     }
+
 }
