@@ -81,7 +81,7 @@ public boolean isUserInSystem(String email){
     return false;
 }
 
-public boolean isPasswordIndentical(String password1, String password2){
+public boolean isPasswordIdentical(String password1, String password2){
     return password1.equals(password2);
 }
 
