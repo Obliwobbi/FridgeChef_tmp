@@ -8,6 +8,9 @@ public class DatabaseReader extends DatabaseConnector{
         connect();
 
         String sql = "SELECT password FROM accounts WHERE email = ?";
+        //? is a placeholder in the sql statement, we later input the correct values through setString.
+        //This prevents SQL injections like "email = ' OR '1'='1", this would NOT be good!
+        //Following sql command would run: SELECT password FROM accounts WHERE email = '' OR '1'='1'
 
         try {
             PreparedStatement stm = conn.prepareStatement(sql);

@@ -8,6 +8,8 @@ class DatabaseReaderTest {
 
     @Test
     void accountLogin() {
+        //Tests for succesfull account login (both email and password is correct)
+
         //Arrange
         DatabaseReader dbReader = new DatabaseReader();
         boolean expected = true;

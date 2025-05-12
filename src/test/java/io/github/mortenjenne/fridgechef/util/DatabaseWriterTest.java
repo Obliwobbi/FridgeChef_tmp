@@ -8,6 +8,8 @@ class DatabaseWriterTest {
 
     @Test
     void createAccount() {
+        //Tests for account creation if email is not in use
+
         //Arrange
         DatabaseWriter dbWriter = new DatabaseWriter();
         boolean expected = true;

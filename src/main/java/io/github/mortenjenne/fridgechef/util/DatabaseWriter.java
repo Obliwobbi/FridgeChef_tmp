@@ -10,6 +10,7 @@ public class DatabaseWriter extends DatabaseConnector{
         connect();
         String sql = "INSERT INTO accounts (accountName, email, password) values (?, ?, ?)";
 
+
         if (dbReader.checkExistingAccount(email)) {
             System.out.println("Email is already in use, please try another!");
             return false;
