@@ -1,30 +1,47 @@
 package io.github.mortenjenne.fridgechef.controller;
 
+import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
 import io.github.mortenjenne.fridgechef.logic.SceneNavigator;
 import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SearchController implements Initializable, SceneController {
-    @FXML
-    private Button searchRecipeButton;
-    private SceneNavigator sceneNavigator;
+    @FXML private Button searchRecipeButton;
+    @FXML private CheckBox isVegetarian;
+    @FXML private ChoiceBox chooseCuisineBox;
+    @FXML private ChoiceBox chooseIngredientBox1;
+    @FXML private ChoiceBox chooseIngredientBox2;
+    @FXML private ChoiceBox chooseIngredientBox3;
+
+    private AppManager appManager;
+
 
 
     @Override
-    public void setSceneController(SceneNavigator sceneNavigator) {
-       this.sceneNavigator = sceneNavigator;
+    public void setAppManager(AppManager appManager){
+        this.appManager = appManager;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        searchRecipeButton.setOnAction(event -> sceneNavigator.switchTo(View.MAIN));
+        searchRecipeButton.setOnAction(event -> appManager.switchTo(View.MAIN));
 
+    }
 
+    // Search methods from Class Diagram not added due to mismatch with "scene"
+
+    private boolean isVegetarian(boolean isVegetarian){
+        // TODO change name an code isVegetarian() body
+        boolean findAppropriateName = isVegetarian;
+        return findAppropriateName;
     }
 }

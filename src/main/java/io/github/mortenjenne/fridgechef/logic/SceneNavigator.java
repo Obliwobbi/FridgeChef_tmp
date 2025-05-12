@@ -10,12 +10,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SceneNavigator {
-
     private Stage stage;
+    private AppManager appManager;
     private Map<View, Parent> cache = new HashMap<>();
 
     public SceneNavigator(Stage stage) {
         this.stage = stage;
+    }
+
+    public void setAppManager(AppManager appManager){
+        this.appManager = appManager;
     }
 
     public void switchTo(View view) {
@@ -36,7 +40,7 @@ public class SceneNavigator {
     private void setController(View view, FXMLLoader loader) {
         Object controller = loader.getController();
         if (controller instanceof SceneController) {
-            ((SceneController) controller).setSceneController(this);
+            ((SceneController) controller).setAppManager(appManager);
         }
     }
 }

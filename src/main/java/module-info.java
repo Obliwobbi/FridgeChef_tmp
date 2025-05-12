@@ -3,6 +3,7 @@ module io.github.mortenjenne.fridgechef {
     requires javafx.fxml;
     requires com.google.gson;
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens io.github.mortenjenne.fridgechef to javafx.fxml, com.google.gson;
 

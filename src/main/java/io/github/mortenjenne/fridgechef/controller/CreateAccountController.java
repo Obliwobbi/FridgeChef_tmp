@@ -6,27 +6,29 @@ import io.github.mortenjenne.fridgechef.logic.SceneNavigator;
 import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainMenuController implements Initializable, SceneController {
+public class CreateAccountController implements Initializable, SceneController {
+
+    @FXML private Label emailErrorLabel;
+    @FXML private Label passwordErrorLabel;
+    @FXML private TextField firstNameTextField;
+    @FXML private TextField emailTextField;
+    @FXML private PasswordField passwordTextField;
+    @FXML private PasswordField retypePasswordTextField;
+    @FXML private Button createAccountButton;
+
     private AppManager appManager;
-    @FXML
-    private Button searchButton;
-    @FXML
-    private Button favoriteDishButton;
-    @FXML
-    private Button fridgeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        searchButton.setOnAction(event -> appManager.switchTo(View.TEST));
-        favoriteDishButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
-        fridgeButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
-    }
+        createAccountButton.setOnAction(event -> appManager.switchTo(View.MAIN));
 
+    }
 
     @Override
     public void setAppManager(AppManager appManager) {

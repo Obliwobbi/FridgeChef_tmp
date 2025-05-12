@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c4dd39;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c4dd39;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.SearchController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #c0d095;">
          <children>
@@ -23,7 +23,7 @@
                   <Font name="System Bold Italic" size="23.0" />
                </font>
             </Text>
-            <CheckBox mnemonicParsing="false" prefHeight="57.0" prefWidth="119.0" text="Vegetarian">
+            <CheckBox fx:id="isVegetarian" mnemonicParsing="false" prefHeight="57.0" prefWidth="119.0" text="Vegetarian">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Text>
-            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+            <ChoiceBox fx:id="chooseCuisineBox" prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -46,7 +46,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Text>
-            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+            <ChoiceBox fx:id="chooseIngredientBox1" prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -59,7 +59,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Text>
-            <ChoiceBox prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+            <ChoiceBox fx:id="chooseIngredientBox2" prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -72,7 +72,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Text>
-            <ChoiceBox prefHeight="41.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
+            <ChoiceBox fx:id="chooseIngredientBox3" prefHeight="41.0" prefWidth="305.0" style="-fx-background-color: #b0b793;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -80,7 +80,7 @@
                   <Insets top="-10.0" />
                </VBox.margin>
             </ChoiceBox>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="106.0" style="-fx-font-size: 13; -fx-background-color: #b0b793; -fx-font-style: Italic;" text="Search Recipes">
+            <Button fx:id="searchRecipeButton" mnemonicParsing="false" prefHeight="42.0" prefWidth="106.0" style="-fx-font-size: 13; -fx-background-color: #b0b793; -fx-font-style: Italic;" text="Search Recipes">
                <VBox.margin>
                   <Insets top="-10.0" />
                </VBox.margin>
