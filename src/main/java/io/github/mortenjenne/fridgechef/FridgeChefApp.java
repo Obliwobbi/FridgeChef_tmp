@@ -18,7 +18,7 @@ public class FridgeChefApp extends Application {
     public void start(Stage stage) throws IOException {
         SceneNavigator sceneNavigator = new SceneNavigator(stage);
 
-        sceneNavigator.switchTo(View.LOGIN);
+        sceneNavigator.switchTo(View.RECIPE);
 
         Image img = new Image(getClass().getResourceAsStream("fridgechef.png"));
         stage.getIcons().add(img);

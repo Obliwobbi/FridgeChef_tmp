@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c4dd39;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.SearchController">
+<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c4dd39;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #c0d095;">
          <children>
@@ -80,7 +80,7 @@
                   <Insets top="-10.0" />
                </VBox.margin>
             </ChoiceBox>
-            <Button fx:id="searchRecipeButton" mnemonicParsing="false" prefHeight="42.0" prefWidth="106.0" style="-fx-font-size: 13; -fx-background-color: #b0b793; -fx-font-style: Italic;" text="Search Recipes">
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="106.0" style="-fx-font-size: 13; -fx-background-color: #b0b793; -fx-font-style: Italic;" text="Search Recipes">
                <VBox.margin>
                   <Insets top="-10.0" />
                </VBox.margin>

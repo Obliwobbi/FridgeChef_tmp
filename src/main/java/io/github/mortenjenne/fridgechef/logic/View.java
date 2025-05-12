@@ -1,10 +1,12 @@
 package io.github.mortenjenne.fridgechef.logic;
 
 public enum View {
-    LOGIN("/io/github/mortenjenne/fridgechef/LoginScreen.fxml"),
-    MAIN("/io/github/mortenjenne/fridgechef/MainMenu.fxml"),
-    CREATE("/io/github/mortenjenne/fridgechef/CreateAccount.fxml"),
-    SEARCH("/io/github/mortenjenne/fridgechef/SearchByIngredient.fxml"),
+    LOGIN("/io/github/mortenjenne/fridgechef/LoginView.fxml"),
+    MAIN("/io/github/mortenjenne/fridgechef/MainMenuView.fxml"),
+    CREATE("/io/github/mortenjenne/fridgechef/CreateAccountView.fxml"),
+    SEARCH("/io/github/mortenjenne/fridgechef/SearchView.fxml"),
+    RESULT("/io/github/mortenjenne/fridgechef/ResultView.fxml"),
+    RECIPE("/io/github/mortenjenne/fridgechef/RecipeView.fxml"),
     TEST("/io/github/mortenjenne/fridgechef/hello-view.fxml");
     //FAVORITES(fileName);
 
