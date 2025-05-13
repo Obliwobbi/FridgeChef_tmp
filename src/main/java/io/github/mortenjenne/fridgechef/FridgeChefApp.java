@@ -22,7 +22,7 @@ public class FridgeChefApp extends Application {
         AppManager manager = new AppManager(sceneNavigator,recipeManager);
         sceneNavigator.setAppManager(manager);
 
-        manager.switchTo(View.CREATE);
+        manager.switchTo(View.FRIDGE);
 
         Image img = new Image(getClass().getResourceAsStream("fridgechef.png"));
         stage.getIcons().add(img);

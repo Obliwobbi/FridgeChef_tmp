@@ -33,7 +33,6 @@ public class CreateAccountController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        createAccountButton.setOnAction(event -> appManager.switchTo(View.MAIN));
         returnButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
         createAccountButton.setOnAction(event -> {
             userName = firstNameTextField.getText();
@@ -43,7 +42,7 @@ public class CreateAccountController implements Initializable, SceneController {
 
             if (validateUserInfo(userName,email, password, confirmPassword)) {
                 appManager.createAccount(userName,email, password);
-                appManager.switchTo(View.MAIN);
+                appManager.switchTo(View.LOGIN);
             }
         });
     }
@@ -69,6 +68,7 @@ public class CreateAccountController implements Initializable, SceneController {
 
         if(appManager.isEmailInSystem(email)){
             emailErrorLabel.setText("Email already registered. Please use a different email address.");
+            return false;
         }
 
         if(!appManager.isValidPassword(password1)){
