@@ -40,10 +40,30 @@
                </color>
             </InnerShadow>
          </effect>
+         <BorderPane.margin>
+            <Insets top="-100.0" />
+         </BorderPane.margin>
       </VBox>
    </center>
    <effect>
       <InnerShadow />
    </effect>
+   <top>
+      <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
 
 </BorderPane>
