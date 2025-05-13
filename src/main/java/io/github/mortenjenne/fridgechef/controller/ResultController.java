@@ -33,7 +33,7 @@ public class ResultController implements Initializable, SceneController {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         returnButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
-        dishOne.setOnMouseClicked(event -> appManager.switchTo(View.RESULT));
+        dishOne.setOnMouseClicked(event -> appManager.switchTo(View.RECIPE));
 
 
     }
