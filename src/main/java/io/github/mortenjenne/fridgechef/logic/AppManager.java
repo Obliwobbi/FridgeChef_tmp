@@ -6,6 +6,9 @@ import io.github.mortenjenne.fridgechef.util.DatabaseConnector;
 import io.github.mortenjenne.fridgechef.util.DatabaseReader;
 import io.github.mortenjenne.fridgechef.util.DatabaseWriter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppManager {
 private RecipeManager recipeManager;
 private Account currentUser;
@@ -54,7 +57,7 @@ private DatabaseWriter dbWriter = new DatabaseWriter();
     public boolean isUserNameValid(String userName) {
         return userName.trim().length() >= 2;
     }
-}
+
 
     public boolean isValidPassword(String password) {
         if (password == null || password.trim().isEmpty()) {
