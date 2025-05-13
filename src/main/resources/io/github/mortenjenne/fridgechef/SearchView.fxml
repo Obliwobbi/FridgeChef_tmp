@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.SearchController">
+<BorderPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.SearchController">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #d59faa;" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: #d59faa;" BorderPane.alignment="CENTER">
          <children>
             <Text text=" Choose Your Ingredients" wrappingWidth="395.86328125">
                <font>
@@ -23,7 +23,7 @@
                   <Font name="System Bold Italic" size="23.0" />
                </font>
                <VBox.margin>
-                  <Insets top="-20.0" />
+                  <Insets />
                </VBox.margin>
             </CheckBox>
             <Text text="Cuisine" wrappingWidth="75.345703125">
@@ -34,7 +34,7 @@
                   <Insets top="-10.0" />
                </VBox.margin>
             </Text>
-            <ChoiceBox fx:id="chooseCuisineBox" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
+            <ChoiceBox fx:id="chooseCuisineBox" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #d59faa;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -47,7 +47,7 @@
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="chooseIngredientBox1" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
+            <ChoiceBox fx:id="chooseIngredientBox1" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #d59faa;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -60,7 +60,7 @@
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="chooseIngredientBox2" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
+            <ChoiceBox fx:id="chooseIngredientBox2" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #d59faa;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -73,7 +73,7 @@
                   <Font name="System Bold Italic" size="22.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="chooseIngredientBox3" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
+            <ChoiceBox fx:id="chooseIngredientBox3" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #d59faa;">
                <effect>
                   <Glow level="0.45" />
                </effect>
@@ -96,7 +96,7 @@
       </VBox>
    </center>
    <top>
-      <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" style="-fx-background-color: #d59faa;" BorderPane.alignment="TOP_RIGHT">
+      <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
                <font>
@@ -105,9 +105,6 @@
                <effect>
                   <Glow />
                </effect>
-               <HBox.margin>
-                  <Insets right="1150.0" />
-               </HBox.margin>
             </Button>
          </children>
          <BorderPane.margin>

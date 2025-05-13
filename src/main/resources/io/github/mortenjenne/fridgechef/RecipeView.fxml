@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<BorderPane prefHeight="660.0" prefWidth="1043.0" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
+<BorderPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
     <effect>
         <InnerShadow />
     </effect>
-   <right>
-                <Label fx:id="recipeNameLabel" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="320.0" text=" &quot;Recipe Name&quot;" BorderPane.alignment="CENTER">
-              <font>
-                  <Font name="System Bold Italic" size="39.0" />
-              </font>
-          </Label>
-   </right>
    <center>
+       <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+           <children>
+                      <Label fx:id="recipeNameLabel" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="320.0" text=" &quot;Recipe Name&quot;">
+                    <font>
+                        <Font name="System Bold Italic" size="39.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="recipeWidget" fitHeight="574.0" fitWidth="594.0" pickOnBounds="true" preserveRatio="true" />
+
+           </children>
+           <effect>
+               <InnerShadow height="23.93" width="18.07">
+                   <color>
+                       <Color red="0.115" green="0.118" blue="0.113" />
+                   </color>
+               </InnerShadow>
+           </effect>
+           <BorderPane.margin>
+               <Insets />
+           </BorderPane.margin>
+       </VBox>
    </center>
     <top>
-        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
+        <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
                     <font>
@@ -29,9 +45,6 @@
                     <effect>
                         <Glow />
                     </effect>
-                    <HBox.margin>
-                        <Insets right="1000.0" />
-                    </HBox.margin>
                 </Button>
             </children>
             <BorderPane.margin>
