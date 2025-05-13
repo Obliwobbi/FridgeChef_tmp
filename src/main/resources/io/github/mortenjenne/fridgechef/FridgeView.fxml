@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.FridgeController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.FridgeController">
     <!-- Background Image -->
     <ImageView fx:id="backgroundImage" fitHeight="1000.0" fitWidth="1190.0">
         <image>
