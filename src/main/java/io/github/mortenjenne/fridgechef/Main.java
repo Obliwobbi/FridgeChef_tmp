@@ -1,18 +1,17 @@
-package io.github.mortenjenne.frigdechef;
+package io.github.mortenjenne.fridgechef;
 
 
-import io.github.mortenjenne.frigdechef.logic.RecipeManager;
-import io.github.mortenjenne.frigdechef.model.Dish;
+import io.github.mortenjenne.fridgechef.logic.RecipeManager;
+import io.github.mortenjenne.fridgechef.model.Dish;
 
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        MainView mainView = new MainView();
+        FridgeChefApp mainView = new FridgeChefApp();
 
         RecipeManager manager = new RecipeManager();
-
 
         try {
             List<Dish> recipes = manager.getRecipesByCuisine("french");  // F.eks. søgning på 'pesto'

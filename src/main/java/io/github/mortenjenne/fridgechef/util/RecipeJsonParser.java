@@ -1,7 +1,7 @@
-package io.github.mortenjenne.frigdechef.util;
+package io.github.mortenjenne.fridgechef.util;
 
 import com.google.gson.Gson;
-import io.github.mortenjenne.frigdechef.model.Dish;
+import io.github.mortenjenne.fridgechef.model.Dish;
 
 import java.util.List;
 

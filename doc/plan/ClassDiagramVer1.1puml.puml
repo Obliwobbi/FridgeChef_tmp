@@ -1,4 +1,6 @@
 @startuml
+!pragma layout smetana
+
 top to bottom direction
 
 class Main{
@@ -33,9 +35,9 @@ class RecipeManager{
   }
 
 interface SceneController{
-+ void initialize();
-+ void handleUserInput();
-+ void navigateToNextView();
++ void initialize()
++ void setController(SceneNavigator navigator)
++ void navigateToNextView()
 }
 
 class StartViewController{

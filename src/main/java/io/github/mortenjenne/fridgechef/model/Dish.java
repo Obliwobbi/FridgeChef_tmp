@@ -1,4 +1,4 @@
-package io.github.mortenjenne.frigdechef.model;
+package io.github.mortenjenne.fridgechef.model;
 
 public class Dish {
     private int id;

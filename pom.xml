@@ -70,7 +70,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                io.github.mortenjenne.frigdechef/io.github.mortenjenne.frigdechef.HelloApplication
+                                io.github.mortenjenne.frigdechef/io.github.mortenjenne.fridgechef.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.MainMenuController">
+
+   <center>
+      <VBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <Label text="Welcome Back &quot;User&quot;!">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+
+            <Button fx:id="searchButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-font-size: 18; -fx-background-color: #b0b793;" text="Search by Ingredients">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+
+            <Button fx:id="fridgeButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-background-color: #b0b793; -fx-font-size: 18;" text="Your Fridge" />
+
+            <Button fx:id="favoriteDishButton" minWidth="53.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="227.0" style="-fx-background-color: #b0b793; -fx-font-size: 18;" text="Your Favorite Dishes" />
+
+         </children>
+         <effect>
+            <InnerShadow height="23.93" width="18.07">
+               <color>
+                  <Color red="0.115" green="0.118" blue="0.113" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <BorderPane.margin>
+            <Insets top="-100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <effect>
+      <InnerShadow />
+   </effect>
+   <top>
+      <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+
+</BorderPane>
