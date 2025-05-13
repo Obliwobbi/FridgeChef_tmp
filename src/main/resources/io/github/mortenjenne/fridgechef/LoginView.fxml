@@ -31,12 +31,27 @@
    <top>
       <VBox alignment="CENTER" prefHeight="493.0" prefWidth="335.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-
-            <ImageView fitHeight="178.0" fitWidth="200.0">
-               <image>
-                  <Image url="@fridgechef.png" />
-               </image>
-            </ImageView>
+            <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="335.0">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="x">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+      
+                  <ImageView fitHeight="178.0" fitWidth="200.0">
+                     <image>
+                        <Image url="@fridgechef.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="60.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FridgeChef">
                <font>
                   <Font name="System Bold Italic" size="29.0" />

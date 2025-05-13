@@ -28,6 +28,7 @@ public class CreateAccountController implements Initializable, SceneController {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         createAccountButton.setOnAction(event -> appManager.switchTo(View.MAIN));
+        returnButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
 
     }
 

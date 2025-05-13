@@ -2,6 +2,7 @@ package io.github.mortenjenne.fridgechef.controller;
 
 import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
+import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -31,6 +32,9 @@ public class ResultController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        returnButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
+        dishOne.setOnMouseClicked(event -> appManager.switchTo(View.RESULT));
+
 
     }
 

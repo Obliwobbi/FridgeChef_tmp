@@ -20,9 +20,10 @@ public class MainMenuController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        searchButton.setOnAction(event -> appManager.switchTo(View.TEST));
+        searchButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
         favoriteDishButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
-        fridgeButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
+        fridgeButton.setOnAction(event -> appManager.switchTo(View.TEST));
+        returnButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
     }
 
 
