@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.List;
 
 public class RecipeApiClient {
@@ -29,6 +30,24 @@ public class RecipeApiClient {
 
     public String fetchRecipesByCuisine(String cuisine) throws Exception{
         String endpoint = apiSearchByRecipe + "?cuisine=" + cuisine + "&number=100&apiKey=" + apiKey;
+        HttpURLConnection connection = (HttpURLConnection) new URL(endpoint).openConnection();
+        connection.setRequestMethod("GET");
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+            StringBuilder response = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                response.append(line);
+            }
+            return response.toString();
+        }
+    }
+
+    public String fetchIngredientByName(String name) throws Exception{
+        String endpoint = "https://api.spoonacular.com/food/ingredients/search"
+                + "?query=" + URLEncoder.encode(name, "UTF-8")
+                + name
+                + apiKey;
         HttpURLConnection connection = (HttpURLConnection) new URL(endpoint).openConnection();
         connection.setRequestMethod("GET");
 

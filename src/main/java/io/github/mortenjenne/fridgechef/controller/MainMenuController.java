@@ -22,7 +22,7 @@ public class MainMenuController implements Initializable, SceneController {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         searchButton.setOnAction(event -> appManager.switchTo(View.TEST));
         favoriteDishButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
-        fridgeButton.setOnAction(event -> appManager.switchTo(View.SEARCH));
+        fridgeButton.setOnAction(event -> appManager.switchTo(View.FRIDGE));
     }
 
 
