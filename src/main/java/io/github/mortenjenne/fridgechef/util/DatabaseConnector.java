@@ -4,8 +4,9 @@ import java.sql.*;
 
 public class DatabaseConnector {
     protected Connection conn;
+
     //Vi skal finde den rigtige path - kan ikke gøres under Code with me som guest
-    private String path = "jetbrains://idea/navigate/reference?project=FridgeChef&path=FridgeChefDB";
+    private String path = "jdbc:sqlite:identifier.sqlite";
 
     public void connect(){
 

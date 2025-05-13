@@ -1,5 +1,6 @@
 package io.github.mortenjenne.fridgechef.logic;
 
+import io.github.mortenjenne.fridgechef.model.Ingredient;
 import io.github.mortenjenne.fridgechef.util.RecipeApiClient;
 import io.github.mortenjenne.fridgechef.util.RecipeJsonParser;
 import io.github.mortenjenne.fridgechef.model.Dish;
@@ -24,4 +25,9 @@ public class RecipeManager {
         String jsonResponse = apiClient.fetchRecipesByCuisine(cuisine);
         return jsonParser.parseRecipes(jsonResponse);
     }
+
+    public List<Ingredient> getIngredient(String name) throws Exception{
+        String jsonResponse = apiClient.fetchIngredientByName(name);
+        return jsonParser.parseIngredients(jsonResponse);
+   }
 }
