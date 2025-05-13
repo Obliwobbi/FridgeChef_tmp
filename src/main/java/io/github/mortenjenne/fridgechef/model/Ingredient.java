@@ -4,6 +4,7 @@ public class Ingredient {
     private int id;
     private String name;
     private String image;
+    private final String apiURL = "https://spoonacular.com/cdn/ingredients_250x250/";
 
 
     public void setId(int id) {
@@ -14,14 +15,21 @@ public class Ingredient {
         this.name = name;
     }
 
-    public void setImage(String imageUrl){
-        this.image = imageUrl;
+    public void setImage(String image){
+        this.image = image;
     }
 
     public int getId() {
         return id; }
+
     public String getName() {
         return name; }
+
     public String getImage() {
         return image; }
+
+    public String getApiURL(){
+        return this.apiURL + this.image;
+    }
+
 }
