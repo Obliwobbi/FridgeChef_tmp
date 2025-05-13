@@ -17,6 +17,7 @@ public class LoginController implements Initializable, SceneController {
        private AppManager appManager;
 
     @FXML private Button loginButton;
+    @FXML private Button exitButton;
     @FXML private Label createAccountLabel;
     @FXML private PasswordField passwordTextField;
     @FXML private TextField emailTextField;
@@ -25,6 +26,7 @@ public class LoginController implements Initializable, SceneController {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loginButton.setOnAction(event -> appManager.switchTo(View.MAIN));
         createAccountLabel.setOnMouseClicked(event -> appManager.switchTo(View.CREATE));
+        exitButton.setOnAction(event -> closeApp());
     }
 
     @Override

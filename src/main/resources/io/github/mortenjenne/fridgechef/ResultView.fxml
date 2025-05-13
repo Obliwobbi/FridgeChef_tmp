@@ -3,17 +3,16 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.ImageView?>
 <BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.ResultController">
    <effect>
       <InnerShadow />
    </effect>
    <center>
-      <GridPane alignment="CENTER" gridLinesVisible="true" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,7 +25,7 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Dish 1">
+                  <Label fx:id="dishOne" text="Dish 1">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -34,12 +33,12 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishOneImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label text="Dish 2">
+                  <Label fx:id="dishTwo" text="Dish 2">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -47,12 +46,12 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishTwoImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                <children>
-                  <Label text="Dish 3">
+                  <Label fx:id="dishThree" text="Dish 3">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -60,12 +59,12 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishThreeImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label text="Dish 4">
+                  <Label fx:id="dishFour" text="Dish 4">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -73,12 +72,12 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishFourImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                <children>
-                  <Label text="Dish 5">
+                  <Label fx:id="dishFive" text="Dish 5">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -86,12 +85,12 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishFiveImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label text="Dish 6">
+                  <Label fx:id="dishSix" text="Dish 6">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
@@ -99,7 +98,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishSixImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
          </children>
@@ -108,13 +107,23 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-
+            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
             <Label text="Chose Your Dish!">
                <font>
-                  <Font name="System Bold Italic" size="18.0" />
+                  <Font name="System Bold Italic" size="22.0" />
                </font>
                <HBox.margin>
-                  <Insets />
+                  <Insets right="50.0" />
                </HBox.margin>
             </Label>
          </children>

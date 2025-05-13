@@ -35,7 +35,8 @@ public class SearchController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        searchRecipeButton.setOnAction(event -> appManager.switchTo(View.MAIN));
+        searchRecipeButton.setOnAction(event -> appManager.switchTo(View.RESULT));
+        returnButton.setOnAction(event -> appManager.switchTo(View.MAIN));
 
     }
 

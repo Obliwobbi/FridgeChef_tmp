@@ -2,6 +2,7 @@ package io.github.mortenjenne.fridgechef.controller;
 
 import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
+import io.github.mortenjenne.fridgechef.logic.SceneNavigator;
 import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,6 +33,8 @@ public class CreateAccountController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        createAccountButton.setOnAction(event -> appManager.switchTo(View.MAIN));
+        returnButton.setOnAction(event -> appManager.switchTo(View.LOGIN));
         createAccountButton.setOnAction(event -> {
             userName = firstNameTextField.getText();
             email = emailTextField.getText();
