@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.ResultController">
+<BorderPane prefHeight="1000.0" prefWidth="1200" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.ResultController">
    <effect>
       <InnerShadow />
    </effect>
@@ -27,7 +27,7 @@
                <children>
                   <Label fx:id="dishOne" text="Dish 1">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -40,7 +40,7 @@
                <children>
                   <Label fx:id="dishTwo" text="Dish 2">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -53,7 +53,7 @@
                <children>
                   <Label fx:id="dishThree" text="Dish 3">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -66,7 +66,7 @@
                <children>
                   <Label fx:id="dishFour" text="Dish 4">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -79,7 +79,7 @@
                <children>
                   <Label fx:id="dishFive" text="Dish 5">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -92,7 +92,7 @@
                <children>
                   <Label fx:id="dishSix" text="Dish 6">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="20.0" />
                      </font>
                      <padding>
                         <Insets top="20.0" />
@@ -105,7 +105,7 @@
       </GridPane>
    </center>
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
          <children>
             <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
                <font>
@@ -115,18 +115,13 @@
                   <InnerShadow />
                </effect>
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets right="1150.0" />
                </HBox.margin>
             </Button>
-            <Label text="Chose Your Dish!">
-               <font>
-                  <Font name="System Bold Italic" size="22.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Label>
          </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
       </HBox>
    </top>
 </BorderPane>
