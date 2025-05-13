@@ -1,0 +1,359 @@
+@startuml
+
+top to bottom direction
+
+
+class Controller {
+- RecipeManager manager
+- ImageView recipeImage1
+- ImageView recipeImage2
+- ImageView recipeImage3
+- Label recipeTitle1
+- Label recipeTitle2
+- Label recipeTitle3
+- Button searchButton
+
++ void initialize()
++ void searchRecipe()
+}
+
+
+class CreateAccountController {
+- AppManager appManager
+- Label emailErrorLabel
+- Label passwordErrorLabel
+- TextField firstNameTextField
+- TextField emailTextField
+- PasswordField passwordTextField
+- PasswordField retypePasswordField
+- Button createAccountButton
+- Button returnButton
+
++ void initialize()
++ void setAppManager(AppManager appManager)
+}
+
+
+class FavoritesController {
+}
+
+
+class FridgeController {
+}
+
+
+class LoginController {
+- AppManager appManager
+- Button loginButton
+- Label createAccountLabel
+- PasswordField passwordTextField
+- TextField emailTextField
+
++ void initialize(URL url, ResourceBundle, resourceBundle)
++ void setAppManager()
+- void login()
+- void signUp()
+- void closerApp()
+}
+
+
+class MainMenuController{
+- AppManager appManager
+- Button searchButton
+- Button favoriteDishButton
+- Button fridgeButton
+- Button returnButton
+
++ void initialize(URL url, ResourceBundle resourceBundle)
++ void setAppManager(AppManager appManager)
+}
+
+
+class RecipeController {
+- AppManager appManager
+- Label recipeNameLabel
+- ImageView recipeWidget
+- Button returnButton
+}
+
+
+class ResultController {
+- AppManager appManager
+- Label dishOne
+- Label dishTwo
+- Label dishThree
+- Label dishFour
+- Label dishFive
+- Label dishSix
+- ImageView dishOneImg
+- ImageView dishTwoImg
+- ImageView dishThreeImg
+- ImageView dishFourImg
+- ImageView dishFiveImg
+- ImageView dishSixImg
+- Button returnButton
+
++ void initialize(URL url, ResourceBundle resourceBundle)
+- void viewRecipe()
++ void setAppManager(AppManager appManager)
+}
+
+
+class searchController{
+- AppManager appManager
+- Button searchRecipeButton
+- CheckBox isVegeterian
+- ChoiceBox chooseCuisineBox
+- ChoiceBox chooseIngredientBox1
+- ChoiceBox chooseIngredientBox2
+- ChoiceBox chooseIngredientBox3
+- Button returnButton
+
++ void initialize(URL url, ResourceBundle resourceBundle)
++ void setAppManager(AppManager appManager)
+- boolean isVegeterian(Boolean isVegeterian)
+}
+
+
+class AppManager {
+- RecipeManager recipeManager
+- Account currentUser
+- SceneNavigator sceneNavigator
+- DatabaseReader dbReader
+
++ AppManager(SceneNavigator sceneNavigator, RecipeManager recipeManager)
++ void switchTo(View view)
++ boolean Login(String email, String password)
++ void createAccount(String accountName, String email, String password)
++ boolean isEmailValid(String email)
++ boolean isUserNameValid(String username)
++ boolean isValidPassword(String password)
++ boolean isUserInSystem(String email)
++ boolean isPasswordIdentical(String password1, String password2)
+}
+
+
+class RecipeManager{
+- RecipeApiClient apiClient;
+- RecipeJsonParser jsonParser;
++ List<Dish> getRecipesByTitle(String ingredients)
++ List<Dish> getRecipesByCuisine(String cuisine)
+}
+
+
+interface SceneController{
++ void setAppManager(AppManager appManager)
+}
+
+
+class SceneNavigator{
+- Stage stage
+- AppManager appManager
+- Map<View, Parent> cache
+
++ SceneNavigator(Stage stage)
++ void setAppManager(AppManager appManager)
++ void switchTo(View view)
+- void setController(View view, FXMLLoader loader)
+}
+
+enum View {
+- String fileName
+View(String filename)
++ String (getFileName)
+}
+
+
+class Account {
+- String userName
+- String email
+- String password
+- List<Dish> favoriteDishes
+- List<Fridge> fridge
+
++ Account(String userName, String email, String password)
++ String getUserName()
++ String getEmail()
++ String getPassword()
++ List<Dish> getFavoriteDishes()
++ void addToFavorites(Dish dish)
++ void removeFromFavorites(Dish dish)
++ void addIngredientToFridge(Ingredient ingredient, int amount)
++ void removeIngredientFromFridge(Ingredient ingredient, int amount)
+}
+
+
+class Dish {
+- int id
+- String title
+- String image
+
++ int getId()
++ int id setId(int id)
++ String getTitle()
++ String setTitle(String title)
++ String setImage(String imageUrl)
++ String getImageUrl()
+}
+
+
+class Fridge {
+- Ingredient ingredient
+- int amount
+- Map<Ingredient, Integer amount> ingredientsInFridge
+
++ Fridge()
++ void addIngredientToFridge(Ingredient ingredient, int quantity)
+- void removeIngredientFromFridge(Ingredient ingredient, int quantity)
++ boolean useIngredient(String name)
+}
+
+
+class Ingredient {
+- int id
+- String name
+- String image
+
++ int getId()
++ String getName()
++ String getImage()
+}
+
+
+class Recipe{
+- int id
+- String title
+- String image
+- String recipeDescription
+- int servings
+- cookingTime
+- String instructions
+- Map<Ingredient, Integer amount> ingredients
+}
+
+class DatabaseConnector {
+# Connection conn
+- String path
+
++ void connect()
+}
+
+
+class DatabaseReader {
+- DatabaseReader db
+
++ boolean accountLogin(String email, String password)
++ boolean checkExistingAccount(String email)
+}
+
+
+class DatabaseWriter {
+- DatabaseConnector db
+- DatabaseReader dbReader
++ boolean createAccount(String email, String accountName, String password)
+}
+
+
+class RecipeApiClient{
+- final String apiSearchByRecipe
+- final String apiKey
+
++ void fetchRecipesByTitle(String query) throws Exception
++ void fetchRecipeByCuisine(String cuisine)
++ List<Dish> getRecipes(String query) throws Exception
++ List<Dish> getRecipesByCuisine(String query) throws Exception
+}
+
+
+class RecipeJsonParser{
+- private Gson gson
+
++ List<Recipe> parseRecipes(String jsonResponse)
+}
+
+
+class RecipeResponse{
+- List<Dish> results
+
++ List<Dish> getResults()
++ void setResults(List<Dish> results)
+}
+
+
+class CreateAccountView {}
+class FavoritesView {}
+class FridgeView {}
+class LoginView {}
+class MainMenuView {}
+class RecipeView {}
+class ResultView {}
+class SearchView {}
+
+
+class FridgeChefApp {
++ static void main(String[] args)
++ void start(Stage stage)
+}
+
+class Main {
++ static void main(String[] args)
++ void start()
+}
+
+
+
+
+FridgeChefApp *-- AppManager
+AppManager --* SceneNavigator
+AppManager --* RecipeManager
+AppManager --* Account
+
+
+Account --* Fridge
+Fridge --* Ingredient
+Fridge --* RecipeManager
+
+RecipeManager --* RecipeApiClient
+RecipeApiClient --* RecipeJsonParser
+RecipeApiClient --* Dish
+RecipeJsonParser --* RecipeResponse
+RecipeResponse --* Dish
+RecipeResponse --* Recipe
+
+RecipeController --* RecipeView
+RecipeController --* AppManager
+
+SceneController <|.. LoginController
+LoginView *- LoginController
+LoginController --* AppManager
+
+SceneController <|.. CreateAccountController
+CreateAccountView *- CreateAccountController
+
+SceneController <|.. MainMenuController
+MainMenuView *- MainMenuController
+MainMenuController --* AppManager
+
+SceneController <|.. SearchController
+SearchView *- SearchController
+SearchController --* AppManager
+
+SceneController <|.. ResultController
+ResultView *- ResultController
+ResultController --* AppManager
+
+SceneController <|.. FridgeController
+FridgeView *- FridgeController
+FridgeController --* AppManager
+
+SceneController <|.. FavoritesController
+FavoritesView *- FavoritesController
+FavoritesController --* AppManager
+
+AppManager --* DatabaseConnector
+DatabaseConnector --* DatabaseReader
+DatabaseConnector --* DatabaseWriter
+
+
+
+@enduml

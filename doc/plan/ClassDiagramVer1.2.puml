@@ -35,6 +35,14 @@ package controller {
     }
 
 
+    class FavoritesController {
+    }
+
+
+    class FridgeController {
+    }
+
+
     class LoginController {
     - AppManager appManager
     - Button loginButton
@@ -289,6 +297,16 @@ package util {
 
 
 
+class CreateAccountView
+class FavoritesView
+class FridgeView
+class LoginView
+class MainMenuView
+class RecipeView
+class ResultView
+class SearchView
+
+
 class FridgeChefApp {
 + static void main(String[] args)
 + void start(Stage stage)
@@ -302,114 +320,7 @@ class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class CreateAccountViewController{
-- TextField e-Mail
-- TextField userName
-- PasswordField password
-- PasswordField passwordConfirmation
-- Button returnToStartButton
-- Label createAccountMessage
-- Label e-MailMessage
-- Label userNameMessage
-- Label passwordMessage
-- Label confirmMessage
-- Button createAccountButton
-
-+ void initialize()
-- boolean isUserInSystem()
-- void createAccount()
-}
-
-
-class MenuViewController{
-- Label welcomeText
-- Button goToFavoritesButton
-- Button goToRecipesButton
-- Button goToFridgeButton
-- Button closeAppButton
-- Button goToMainMenuButton
-
-+ void initialize()
-- void goToFavorites()
-- void goToRecipes()
-- void closeApp()
-}
-
-
-class InstructionViewController{
-- ImageView viewWidget
-- Button goToMainMenuButton
-- Button goToSearchResultButton
-- Button addToFavoritesButton
-- ImageView viewRecipe
-- Label instructions
-
-+ void initialize()
-- void addToFavorites()
-- void goToSearchResult()
-- void closeApp()
-}
-
-
-class SearchViewController{
-- Label welcomeText
-- Button goToMainMenuButton
-- ChoiceBox chooseCuisineBox
-- CheckBox isVegeterianBox
-- ChoiceBox chooseIngredientOneBox
-- ChoiceBox chooseIngredientTwoBox
-- ChoiceBox chooseIngredientThreeBox
-
-+ void initialize()
-- void searchByIngredient(List<Ingredient> ingredients)
-- void searchByCuisine(String cuisine)
-- Boolean isVegeterian(Boolean isVegeterian)
-}
-
-
-
-
-
-
-
-
-
-
-class FavoritesView
-class FavoritesViewController
-class FridgeView
-class FridgeViewController
-class StartView
-class CreateAccountView
-class MenuView
-class InstructionView
-class SearchView
-class ResultView
-
-
-
-Main *-- AppManager
+FridgeChefApp *-- AppManager
 AppManager --* SceneNavigator
 AppManager --* RecipeManager
 AppManager --* Account
@@ -426,40 +337,49 @@ RecipeJsonParser --* RecipeResponse
 RecipeResponse --* Dish
 RecipeResponse --* Recipe
 
+RecipeController --* RecipeView
+RecipeController --* AppManager
+
 SceneController <|.. LoginController
-StartView *- LoginController
+LoginView *- LoginController
 LoginController --* AppManager
 
-SceneController <|.. CreateAccountViewController
-CreateAccountView *- CreateAccountViewController
+SceneController <|.. CreateAccountController
+CreateAccountView *- CreateAccountController
 
-SceneController <|.. MenuViewController
-MenuView *- MenuViewController
-MenuViewController --* AppManager
+SceneController <|.. MainMenuController
+MainMenuView *- MainMenuController
+MainMenuController --* AppManager
 
-SceneController <|.. SearchViewController
-SearchView *- SearchViewController
-SearchViewController --* AppManager
+SceneController <|.. SearchController
+SearchView *- SearchController
+SearchController --* AppManager
 
 SceneController <|.. ResultController
 ResultView *- ResultController
 ResultController --* AppManager
 
-SceneController <|.. InstructionViewController
-InstructionView *- InstructionViewController
-InstructionViewController --* AppManager
+SceneController <|.. FridgeController
+FridgeView *- FridgeController
+FridgeController --* AppManager
 
-SceneController <|.. FridgeViewController
-FridgeView *- FridgeViewController
-FridgeViewController --* AppManager
-
-SceneController <|.. FavoritesViewController
-FavoritesView *- FavoritesViewController
-FavoritesViewController --* AppManager
+SceneController <|.. FavoritesController
+FavoritesView *- FavoritesController
+FavoritesController --* AppManager
 
 AppManager --* DatabaseConnector
 DatabaseConnector --* DatabaseReader
 DatabaseConnector --* DatabaseWriter
+
+
+class InstructionView
+
+class InstructionViewController{
+}
+
+SceneController <|.. InstructionViewController
+InstructionView *- InstructionViewController
+InstructionViewController --* AppManager
 
 
 @enduml
