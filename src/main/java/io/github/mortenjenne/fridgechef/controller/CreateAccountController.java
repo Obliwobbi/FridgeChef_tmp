@@ -2,6 +2,7 @@ package io.github.mortenjenne.fridgechef.controller;
 
 import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
+import io.github.mortenjenne.fridgechef.logic.SceneNavigator;
 import io.github.mortenjenne.fridgechef.logic.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
