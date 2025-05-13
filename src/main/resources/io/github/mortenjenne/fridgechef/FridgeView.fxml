@@ -81,4 +81,12 @@
    <effect>
       <InnerShadow />
    </effect>
+    <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
+        <font>
+            <Font size="14.0" />
+        </font>
+        <effect>
+            <Glow />
+        </effect>
+    </Button>
 </StackPane>

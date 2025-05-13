@@ -3,6 +3,7 @@ package io.github.mortenjenne.fridgechef.controller;
 import io.github.mortenjenne.fridgechef.logic.AppManager;
 import io.github.mortenjenne.fridgechef.logic.RecipeManager;
 import io.github.mortenjenne.fridgechef.logic.SceneController;
+import io.github.mortenjenne.fridgechef.logic.View;
 import io.github.mortenjenne.fridgechef.model.Ingredient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,6 +23,8 @@ public class FridgeController implements Initializable, SceneController {
 
     @FXML
     private Button addToFridgeButton;
+    @FXML
+    private Button returnButton;
     @FXML
     private Button searchButton;
     @FXML
@@ -48,7 +51,7 @@ public class FridgeController implements Initializable, SceneController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        returnButton.setOnAction(event -> appManager.switchTo(View.MAIN));
         searchButton.setOnAction(event -> {
 
             try {

@@ -1,6 +1,7 @@
 package io.github.mortenjenne.fridgechef.logic;
 
 import io.github.mortenjenne.fridgechef.model.Account;
+import io.github.mortenjenne.fridgechef.model.Fridge;
 import io.github.mortenjenne.fridgechef.model.Ingredient;
 import io.github.mortenjenne.fridgechef.util.DatabaseConnector;
 import io.github.mortenjenne.fridgechef.util.DatabaseReader;
@@ -8,6 +9,7 @@ import io.github.mortenjenne.fridgechef.util.DatabaseWriter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class AppManager {
 private RecipeManager recipeManager;
@@ -15,6 +17,7 @@ private Account currentUser;
 private SceneNavigator sceneNavigator;
 private DatabaseReader dbReader = new DatabaseReader();
 private DatabaseWriter dbWriter = new DatabaseWriter();
+private Fridge fridge = new Fridge();
 
     public AppManager(SceneNavigator sceneNavigator, RecipeManager recipeManager) {
         this.recipeManager = recipeManager;
@@ -84,6 +87,10 @@ private DatabaseWriter dbWriter = new DatabaseWriter();
 
     public boolean isPasswordIndentical(String password, String confirmPassword) {
         return password.equals(confirmPassword);
+    }
+
+    public List<Ingredient> getIngredients(){
+        return fridge.getIngredientsInFridge();
     }
 
 }
