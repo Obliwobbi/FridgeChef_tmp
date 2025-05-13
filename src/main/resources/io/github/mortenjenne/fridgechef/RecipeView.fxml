@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="660.0" prefWidth="1043.0" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
     <effect>
         <InnerShadow />
     </effect>
-   <top>
-       <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
-           <children>
-               <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
-                   <font>
-                       <Font size="14.0" />
-                   </font>
-                   <effect>
-                  <Glow />
-                   </effect>
-               <HBox.margin>
-                  <Insets right="1150.0" />
-               </HBox.margin>
-               </Button>
-           </children>
-           <BorderPane.margin>
-               <Insets left="20.0" top="20.0" />
-           </BorderPane.margin>
-       </HBox>
-   </top>
+   <right>
+                <Label fx:id="recipeNameLabel" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="320.0" text=" &quot;Recipe Name&quot;" BorderPane.alignment="CENTER">
+              <font>
+                  <Font name="System Bold Italic" size="39.0" />
+              </font>
+          </Label>
+   </right>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-                      <Label fx:id="recipeNameLabel" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="320.0" text=" &quot;Recipe Name&quot;">
-                    <font>
-                        <Font name="System Bold Italic" size="39.0" />
-                    </font>
-                </Label>
-              <ImageView fitHeight="771.0" fitWidth="854.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </VBox>
    </center>
+    <top>
+        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
+            <children>
+                <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <HBox.margin>
+                        <Insets right="1000.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
 
 </BorderPane>

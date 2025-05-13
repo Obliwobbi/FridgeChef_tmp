@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="1000.0" prefWidth="1200" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.ResultController">
+<BorderPane prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.ResultController">
    <effect>
       <InnerShadow />
    </effect>
@@ -33,7 +33,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishOneImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishOneImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
@@ -46,7 +46,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishTwoImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishTwoImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -59,7 +59,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishThreeImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishThreeImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -72,7 +72,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishFourImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishFourImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -85,7 +85,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishFiveImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishFiveImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -98,7 +98,7 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <ImageView fx:id="dishSixImg" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dishSixImg" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </VBox>
          </children>
@@ -107,12 +107,12 @@
    <top>
       <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
          <children>
-            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
+            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
                <font>
                   <Font size="14.0" />
                </font>
                <effect>
-                  <InnerShadow />
+                  <Glow />
                </effect>
                <HBox.margin>
                   <Insets right="1150.0" />
