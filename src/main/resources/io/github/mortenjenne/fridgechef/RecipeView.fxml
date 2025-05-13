@@ -7,15 +7,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
+<BorderPane prefHeight="1000.0" prefWidth="1200" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.RecipeController">
     <effect>
         <InnerShadow />
     </effect>
-    <center>
-        <ImageView fitHeight="500.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-    </center>
    <top>
-       <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+       <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
            <children>
                <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
                    <font>
@@ -24,24 +21,27 @@
                    <effect>
                        <InnerShadow />
                    </effect>
-               </Button>
-
-                <Label alignment="TOP_LEFT" text=" &quot;Recipe Name&quot;">
-                    <font>
-                        <Font name="System Bold Italic" size="18.0" />
-                    </font>
                <HBox.margin>
-                  <Insets />
+                  <Insets right="1150.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="50.0" top="3.0" />
-               </padding>
-                </Label>
+               </Button>
            </children>
            <BorderPane.margin>
                <Insets left="20.0" top="20.0" />
            </BorderPane.margin>
        </HBox>
    </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+                      <Label fx:id="recipeNameLabel" alignment="TOP_LEFT" prefHeight="59.0" prefWidth="320.0" text=" &quot;Recipe Name&quot;">
+                    <font>
+                        <Font name="System Bold Italic" size="39.0" />
+                    </font>
+                </Label>
+              <ImageView fitHeight="771.0" fitWidth="854.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </center>
 
 </BorderPane>
