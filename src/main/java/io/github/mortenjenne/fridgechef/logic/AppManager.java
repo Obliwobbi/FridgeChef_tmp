@@ -4,16 +4,14 @@ import io.github.mortenjenne.fridgechef.model.Account;
 import io.github.mortenjenne.fridgechef.model.Ingredient;
 import io.github.mortenjenne.fridgechef.util.DatabaseConnector;
 import io.github.mortenjenne.fridgechef.util.DatabaseReader;
-
-import java.util.ArrayList;
-import java.util.List;
+import io.github.mortenjenne.fridgechef.util.DatabaseWriter;
 
 public class AppManager {
-    private RecipeManager recipeManager;
-    private Account currentUser;
-    private SceneNavigator sceneNavigator;
-    private DatabaseReader dbReader = new DatabaseReader();
-    //private DatabaseWriter dbWriter = new DatabaseWriter();
+private RecipeManager recipeManager;
+private Account currentUser;
+private SceneNavigator sceneNavigator;
+private DatabaseReader dbReader = new DatabaseReader();
+private DatabaseWriter dbWriter = new DatabaseWriter();
 
     public AppManager(SceneNavigator sceneNavigator, RecipeManager recipeManager) {
         this.recipeManager = recipeManager;
@@ -56,6 +54,7 @@ public class AppManager {
     public boolean isUserNameValid(String userName) {
         return userName.trim().length() >= 2;
     }
+}
 
     public boolean isValidPassword(String password) {
         if (password == null || password.trim().isEmpty()) {
