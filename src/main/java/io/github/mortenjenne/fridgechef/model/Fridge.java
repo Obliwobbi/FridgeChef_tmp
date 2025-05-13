@@ -1,28 +1,34 @@
 package io.github.mortenjenne.fridgechef.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Fridge {
     private Ingredient ingredient;
     private int amount;
-    private Map<Ingredient,Integer> ingredientsInFridge;
+    private List<Ingredient> ingredientsInFridge;
 
     public Fridge(){
-        this.ingredientsInFridge = new HashMap<>();
+        this.ingredientsInFridge = new ArrayList<>();
     }
 
-    public void addIngredientToFridge(Ingredient ingredient, int quantity){
-        this.ingredientsInFridge.put(ingredient,quantity);
+    public void addIngredientToFridge(Ingredient ingredient){
+        this.ingredientsInFridge.add(ingredient);
     }
 
-    public void removeIngredientFromFridge(Ingredient ingredient, int quantity){
+    public void removeIngredientFromFridge(Ingredient ingredient){
         //TODO logic virker ikke her
-        this.ingredientsInFridge.remove(ingredient,quantity);
+        this.ingredientsInFridge.remove(ingredient);
     }
 
     public boolean useIngredient(String name){
         return false;
+    }
+
+    public List<Ingredient> getIngredientsInFridge(){
+        return this.ingredientsInFridge;
     }
 
 

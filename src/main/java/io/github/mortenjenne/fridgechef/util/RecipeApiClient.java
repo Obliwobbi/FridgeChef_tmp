@@ -44,9 +44,11 @@ public class RecipeApiClient {
     }
 
     public String fetchIngredientByName(String name) throws Exception{
+        // + URLEncoder.encode(name, "UTF-8") Mellemrums håndtering
         String endpoint = "https://api.spoonacular.com/food/ingredients/search"
-                + "?query=" + URLEncoder.encode(name, "UTF-8")
+                + "?query="
                 + name
+                + "&apiKey="
                 + apiKey;
         HttpURLConnection connection = (HttpURLConnection) new URL(endpoint).openConnection();
         connection.setRequestMethod("GET");

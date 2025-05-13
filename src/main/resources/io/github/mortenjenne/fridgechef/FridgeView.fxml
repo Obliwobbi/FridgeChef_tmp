@@ -40,20 +40,15 @@
          <ImageView fitHeight="87.0" fitWidth="100.0" layoutX="472.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
          <ImageView fitHeight="87.0" fitWidth="100.0" layoutX="577.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
          <ImageView fitHeight="87.0" fitWidth="100.0" layoutX="683.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-         <ImageView fitHeight="98.0" fitWidth="100.0" layoutX="783.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-         <ImageView fitHeight="87.0" fitWidth="100.0" layoutX="364.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-         <ImageView fitHeight="104.0" fitWidth="87.0" layoutX="472.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-         <ImageView fitHeight="102.0" fitWidth="93.0" layoutX="577.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-         <ImageView fitHeight="102.0" fitWidth="82.0" layoutX="683.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-         <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="783.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-         <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="364.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-         <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="472.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-         <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="577.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-         <ImageView fitHeight="116.0" fitWidth="89.0" layoutX="683.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-         <ImageView fitHeight="73.0" fitWidth="99.0" layoutX="783.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-         <ImageView fitHeight="73.0" fitWidth="99.0" layoutX="364.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-         <ImageView fitHeight="73.0" fitWidth="92.0" layoutX="472.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-         <ImageView fitHeight="73.0" fitWidth="92.0" layoutX="683.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+         <ImageView fx:id="fridge1_1" fitHeight="98.0" fitWidth="125.0" layoutX="783.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         <ImageView fx:id="fridge1_2" fitHeight="73.0" fitWidth="95.0" layoutX="364.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         <ImageView fx:id="fridge1_3" fitHeight="73.0" fitWidth="95.0" layoutX="472.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+         <ImageView fx:id="fridge1_4" fitHeight="73.0" fitWidth="95.0" layoutX="577.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+         <ImageView fx:id="fridge1_5" fitHeight="116.0" fitWidth="89.0" layoutX="683.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+         <ImageView fx:id="fridge2_1" fitHeight="73.0" fitWidth="99.0" layoutX="783.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         <ImageView fx:id="fridge2_2" fitHeight="73.0" fitWidth="99.0" layoutX="364.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+         <ImageView fx:id="fridge2_4" fitHeight="73.0" fitWidth="92.0" layoutX="472.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+         <ImageView fx:id="fridge2_5" fitHeight="73.0" fitWidth="92.0" layoutX="683.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
          <VBox prefHeight="113.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
                <Label prefHeight="27.0" prefWidth="249.0" text="Add ingredients to your fridge">
@@ -62,13 +57,13 @@
                   </font>
                </Label>
                <TextField fx:id="searchText" prefHeight="25.0" prefWidth="252.0" promptText="Search ingredient by name" />
-               <Button fx:id="SearchButton" mnemonicParsing="false" text="Search" />
+               <Button fx:id="searchButton" mnemonicParsing="false" text="Search" />
             </children>
          </VBox>
-         <ImageView fitHeight="81.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-         <ImageView fitHeight="81.0" fitWidth="88.0" layoutX="453.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-         <ImageView fitHeight="81.0" fitWidth="96.0" layoutX="563.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-         <ImageView fitHeight="81.0" fitWidth="96.0" layoutX="661.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+         <ImageView fx:id="fridge3_2" fitHeight="81.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+         <ImageView fx:id="fridge3_3" fitHeight="81.0" fitWidth="88.0" layoutX="453.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+         <ImageView fx:id="fridge3_4" fitHeight="81.0" fitWidth="96.0" layoutX="563.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+         <ImageView fx:id="fridge3_5" fitHeight="81.0" fitWidth="96.0" layoutX="661.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
          <VBox prefHeight="93.0" prefWidth="86.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <children>
                <Label fx:id="searchLabel" prefHeight="17.0" prefWidth="99.0">
@@ -80,6 +75,7 @@
                <Button fx:id="addToFridgeButton" mnemonicParsing="false" text="Add to fridge" />
             </children>
          </VBox>
+         <ImageView fx:id="fridge3_1" fitHeight="88.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       </children>
    </GridPane>
    <effect>
