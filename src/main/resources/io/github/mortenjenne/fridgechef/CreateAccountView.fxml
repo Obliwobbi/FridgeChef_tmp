@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.CreateAccountController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.CreateAccountController">
     <effect>
         <InnerShadow />
     </effect>
@@ -24,10 +24,10 @@
                         <Font name="System Bold Italic" size="25.0" />
                     </font>
                     <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="-20.0" />
                     </VBox.margin>
                 </Text>
-                <TextField fx:id="firstNameTextField" layoutX="30.0" layoutY="206.0" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #b0b793;">
+                <TextField fx:id="firstNameTextField" layoutX="30.0" layoutY="206.0" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
                     <font>
                         <Font name="System Bold Italic" size="16.0" />
                     </font>
@@ -54,7 +54,7 @@
                         <Insets left="20.0" right="20.0" top="-30.0" />
                     </VBox.margin>
                 </Text>
-                <TextField fx:id="emailTextField" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #b0b793;">
+                <TextField fx:id="emailTextField" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #d59faa;">
                     <VBox.margin>
                         <Insets left="250.0" right="250.0" top="-45.0" />
                     </VBox.margin>
@@ -81,7 +81,7 @@
                         <Insets left="20.0" right="20.0" top="-30.0" />
                     </VBox.margin>
                 </Text>
-                <PasswordField fx:id="passwordTextField" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #b0b793;">
+                <PasswordField fx:id="passwordTextField" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #d59faa;">
                     <VBox.margin>
                         <Insets left="250.0" right="250.0" top="-45.0" />
                     </VBox.margin>
@@ -97,7 +97,7 @@
                         <Insets top="-25.0" />
                     </VBox.margin>
                 </Text>
-                <PasswordField fx:id="retypePasswordTextField" layoutY="238.0" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #b0b793;">
+                <PasswordField fx:id="retypePasswordTextField" layoutY="238.0" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #d59faa;">
                     <VBox.margin>
                         <Insets left="250.0" right="250.0" top="-45.0" />
                     </VBox.margin>
@@ -112,7 +112,7 @@
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Button fx:id="createAccountButton" prefHeight="53.0" prefWidth="198.0" style="-fx-background-color: #b0b793; -fx-font-size: 20; -fx-font-style: italic; -fx-font-weight: bold;" text="Create Account">
+                <Button fx:id="createAccountButton" prefHeight="53.0" prefWidth="198.0" style="-fx-background-color: #d59faa; -fx-font-size: 20; -fx-font-style: italic; -fx-font-weight: bold;" text="Create Account">
                     <VBox.margin>
                         <Insets top="-30.0" />
                     </VBox.margin>
@@ -133,15 +133,15 @@
     <top>
         <HBox alignment="CENTER" prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="TOP_RIGHT">
             <children>
-                <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
+                <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
                     <font>
                         <Font size="14.0" />
                     </font>
                     <effect>
-                        <InnerShadow />
+                        <Glow />
                     </effect>
                     <HBox.margin>
-                        <Insets right="1150.0" />
+                        <Insets right="1000.0" />
                     </HBox.margin>
                 </Button>
             </children>

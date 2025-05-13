@@ -7,10 +7,29 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #c0d095;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.MainMenuController">
-
-   <center>
-      <VBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="720.0" prefWidth="1080" style="-fx-background-color: #d59faa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.mortenjenne.fridgechef.controller.MainMenuController">
+   <effect>
+      <InnerShadow />
+   </effect>
+   <top>
+      <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #d59faa;" text="&lt;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="665.0" prefWidth="1080.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
 
             <Label text="Welcome Back &quot;User&quot;!">
@@ -22,7 +41,7 @@
                </VBox.margin>
             </Label>
 
-            <Button fx:id="searchButton" minWidth="53.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="431.0" style="-fx-font-size: 25; -fx-background-color: #b0b793; -fx-font-weight: bold; -fx-font-style: italic;" text="Search by Ingredients">
+            <Button fx:id="searchButton" minWidth="53.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="500.0" style="-fx-font-size: 25; -fx-background-color: #d59faa; -fx-font-weight: bold; -fx-font-style: italic;" text="Search by Ingredients">
                <font>
                   <Font size="39.0" />
                </font>
@@ -31,12 +50,12 @@
                </effect>
             </Button>
 
-            <Button fx:id="fridgeButton" minWidth="53.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="431.0" style="-fx-background-color: #b0b793; -fx-font-size: 25; -fx-font-weight: Bold; -fx-font-style: italic;" text="Your Fridge">
+            <Button fx:id="fridgeButton" minWidth="53.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="500.0" style="-fx-background-color: #d59faa; -fx-font-size: 25; -fx-font-weight: Bold; -fx-font-style: italic;" text="Your Fridge">
                <effect>
                   <Glow />
                </effect></Button>
 
-            <Button fx:id="favoriteDishButton" minWidth="53.0" mnemonicParsing="false" prefHeight="224.0" prefWidth="431.0" style="-fx-background-color: #b0b793; -fx-font-size: 25; -fx-font-weight: bold; -fx-font-style: italic;" text="Your Favorite Dishes">
+            <Button fx:id="favoriteDishButton" minWidth="53.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="500.0" style="-fx-background-color: #d59faa; -fx-font-size: 25; -fx-font-weight: bold; -fx-font-style: italic;" text="Your Favorite Dishes">
                <effect>
                   <Glow />
                </effect></Button>
@@ -53,26 +72,6 @@
             <Insets top="-100.0" />
          </BorderPane.margin>
       </VBox>
-   </center>
-   <effect>
-      <InnerShadow />
-   </effect>
-   <top>
-      <HBox prefHeight="26.0" prefWidth="335.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="returnButton" mnemonicParsing="false" style="-fx-background-color: #b0b793;" text="&lt;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-         </children>
-         <BorderPane.margin>
-            <Insets left="20.0" top="20.0" />
-         </BorderPane.margin>
-      </HBox>
-   </top>
+   </bottom>
 
 </BorderPane>
