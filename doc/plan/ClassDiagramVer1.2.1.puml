@@ -3,7 +3,7 @@
 top to bottom direction
 
 
-class Controller {
+class TestController {
 - RecipeManager manager
 - ImageView recipeImage1
 - ImageView recipeImage2
@@ -39,6 +39,15 @@ class FavoritesController {
 
 
 class FridgeController {
+- AppManager appManager
+- Button addToFridgeButton
+- Label searchLabel
+- ImageView searchImage
+- TextField searchText
+- List<Ingridient> ingredientsList
+
++ void setAppManager(AppManager appManager)
++ void initialize(URL url, ResourceBundle resourceBundle)
 }
 
 
@@ -99,7 +108,7 @@ class ResultController {
 }
 
 
-class searchController{
+class SearchController{
 - AppManager appManager
 - Button searchRecipeButton
 - CheckBox isVegeterian
@@ -308,6 +317,7 @@ AppManager --* SceneNavigator
 AppManager --* RecipeManager
 AppManager --* Account
 
+SceneNavigator -* View
 
 Account --* Fridge
 Fridge --* Ingredient
@@ -320,8 +330,9 @@ RecipeJsonParser --* RecipeResponse
 RecipeResponse --* Dish
 RecipeResponse --* Recipe
 
-RecipeController --* RecipeView
+RecipeController -* RecipeView
 RecipeController --* AppManager
+SceneController <|.. RecipeController
 
 SceneController <|.. LoginController
 LoginView *- LoginController
