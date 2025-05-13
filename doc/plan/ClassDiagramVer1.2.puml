@@ -219,6 +219,18 @@ package model {
     + String getName()
     + String getImage()
     }
+
+
+    class Recipe{
+    - int id
+    - String title
+    - String image
+    - String recipeDescription
+    - int servings
+    - cookingTime
+    - String instructions
+    - Map<Ingredient, Integer amount> ingredients
+    }
 }
 
 
@@ -309,19 +321,7 @@ class Main {
 
 
 
-class StartViewController{
-- TextField e-Mail
-- PasswordField passwordField
-- Button loginButton
-- Button signUpButton
-- Button closeAppButton
-- Label welcomeMessage
 
-+ void initialize()
-- void login()
-- void signUp()
-- void closeApp()
-}
 
 class CreateAccountViewController{
 - TextField e-Mail
@@ -388,24 +388,8 @@ class SearchViewController{
 }
 
 
-class ResultViewController{
-- ScroolBar viewResultBar
-
-+ void initialize()
-- void viewRecipe()
-}
 
 
-class Recipe{
-- int id
-- String title
-- String image
-- String recipeDescription
-- int servings
-- cookingTime
-- String instructions
-- Map<Ingredient, Integer amount> ingredients
-}
 
 
 
@@ -442,9 +426,9 @@ RecipeJsonParser --* RecipeResponse
 RecipeResponse --* Dish
 RecipeResponse --* Recipe
 
-SceneController <|.. StartViewController
-StartView *- StartViewController
-StartViewController --* AppManager
+SceneController <|.. LoginController
+StartView *- LoginController
+LoginController --* AppManager
 
 SceneController <|.. CreateAccountViewController
 CreateAccountView *- CreateAccountViewController
@@ -457,9 +441,9 @@ SceneController <|.. SearchViewController
 SearchView *- SearchViewController
 SearchViewController --* AppManager
 
-SceneController <|.. ResultViewController
-ResultView *- ResultViewController
-ResultViewController --* AppManager
+SceneController <|.. ResultController
+ResultView *- ResultController
+ResultController --* AppManager
 
 SceneController <|.. InstructionViewController
 InstructionView *- InstructionViewController
