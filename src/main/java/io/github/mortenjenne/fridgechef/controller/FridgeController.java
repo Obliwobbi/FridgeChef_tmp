@@ -49,7 +49,6 @@ public class FridgeController implements Initializable, SceneController {
 
                 String imageUrl = "https://spoonacular.com/cdn/ingredients_250x250/" + ingredient.getImage();
 
-                // Sæt billedet
                 searchImage.setImage(new Image(imageUrl));
             } else {
                 searchLabel.setText("Ingen ingredienser fundet");
