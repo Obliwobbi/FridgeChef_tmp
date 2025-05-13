@@ -1,6 +1,7 @@
 package io.github.mortenjenne.fridgechef.logic;
 
 import io.github.mortenjenne.fridgechef.model.Account;
+import io.github.mortenjenne.fridgechef.model.Fridge;
 import io.github.mortenjenne.fridgechef.model.Ingredient;
 import io.github.mortenjenne.fridgechef.util.DatabaseConnector;
 import io.github.mortenjenne.fridgechef.util.DatabaseReader;
@@ -15,10 +16,11 @@ private Account currentUser;
 private SceneNavigator sceneNavigator;
 private DatabaseReader dbReader = new DatabaseReader();
 private DatabaseWriter dbWriter = new DatabaseWriter();
+private Fridge fridge = new Fridge();
 
     public AppManager(SceneNavigator sceneNavigator, RecipeManager recipeManager) {
         this.recipeManager = recipeManager;
-        this.sceneNavigator = sceneNavigator;
+        this.sceneNavigator = sceneNavigator;;
     }
 
     public void switchTo(View view) {
@@ -33,6 +35,13 @@ private DatabaseWriter dbWriter = new DatabaseWriter();
             System.out.println("Error loading ingredient search");
         }
         return ingredients;
+    }
+
+    public List<Ingredient> loadFridgeIngredients(){
+        List<Ingredient> storedIngredients = new ArrayList<>();
+        //TODO Vi skal kunne hente en brugers ingredienser fra databasen og dermed få det vist i køle og opskriftsøgning
+        //storedIngredients = Dbreader.getUserIngredients()
+        return storedIngredients;
     }
 
     public boolean login(String email, String password) {
@@ -86,6 +95,9 @@ private DatabaseWriter dbWriter = new DatabaseWriter();
         return password.equals(confirmPassword);
     }
 
+    public Fridge getFridge() {
+        return fridge;
+    }
 }
 
     /*public String validatePasswordRequirements(String password) {
